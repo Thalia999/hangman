@@ -5,9 +5,11 @@ let newGame = function(){
 let randomIndex =parseInt(Math.random() * PossibleWords.length);
  word= PossibleWords[randomIndex];
  guesses = "";
-console.log("Word Chosen :", word);
+ updatePage();
+}
 
 
+let updatePage = function(){
 let clueString = "";
 for (let i = 0; i < word.length; i++) {
     var currentLetter = word.charAt(i);
