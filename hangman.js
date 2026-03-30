@@ -2,8 +2,9 @@ const PossibleWords = ["obdurate", "versimilitude", "dissonant", "obsequious", "
 
 let newGame = function(){
 
-var randomIndex =parseInt(Math.random() * PossibleWords.length);
-let word= PossibleWords[randomIndex];
+let randomIndex =parseInt(Math.random() * PossibleWords.length);
+ word= PossibleWords[randomIndex];
+ guesses = "";
 console.log("Word Chosen :", word);
 
 
@@ -21,11 +22,14 @@ else{
 }
 let clue = document.getElementById("clue");
 clue.textContent = clueString;
+
+let guessArea= document.getElementById("guesses");
+guessArea.textContent = "Guesses: " + guesses;
 }
 
 let guessLetter = function(){
 let input = document.getElementById("guess");
 let letter = input.value;
-guesses += letter;
+guesses+=letter;
 updatePage();
 }
