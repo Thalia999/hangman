@@ -46,5 +46,7 @@ if(word.indexOf(letter)< 0){
 }
 
 guesses+=letter;
+input.value=""; //guess box is cleared after each guess
 updatePage();
 }
+//most r if statements for hw
