@@ -49,6 +49,10 @@ if (guessCount===0){
     input.value="";
     return;
 }
+if (guess.indexOf(letter) >= 0){
+    input.value="";
+    return;
+}
 if(word.indexOf(letter)< 0){
     guessCount--;
 }
