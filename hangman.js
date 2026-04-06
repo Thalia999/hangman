@@ -41,6 +41,11 @@ let guessLetter = function(){
 let input = document.getElementById("guess");
 let letter = input.value;
 letter = letter.toLowerCase();  
+if (word===""){
+    input.value="";
+    return;
+}
+
 if(word.indexOf(letter)< 0){
     guessCount--;
 }
