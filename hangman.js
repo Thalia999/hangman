@@ -35,7 +35,7 @@ guessArea.textContent = "Guesses: " + guesses;
 
 let image = document.getElementById("hangmanpic");
 image.src =`images/hangman${guessCount}.gif`;
-}
+
 
 let won =true;
 for (let i = 0; i < word.length; i++) {
@@ -50,7 +50,7 @@ if (won){
 else if (guessCount === 0){
     guessArea.textContent="Sorry you lost :( The word was " + word;
 }
-
+}
 
 let guessLetter = function(){
 let input = document.getElementById("guess");
@@ -64,7 +64,7 @@ if (guessCount===0){
     input.value="";
     return;
 }
-if (guess.indexOf(letter) >= 0){
+if (guesses.indexOf(letter) >= 0){
     input.value="";
     return;
 }
