@@ -45,7 +45,10 @@ if (word===""){
     input.value="";
     return;
 }
-
+if (guessCount===0){
+    input.value="";
+    return;
+}
 if(word.indexOf(letter)< 0){
     guessCount--;
 }
@@ -54,4 +57,3 @@ guesses+=letter;
 input.value=""; //guess box is cleared after each guess
 updatePage();
 }
-//most r if statements for hw
